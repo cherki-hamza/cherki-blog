@@ -99,7 +99,9 @@
                             @foreach($trending_posts as $post)
                               <div class="tw-item">
                                 <div class="tw-thumb">
-                                    <img src="{{asset($post->featured_image)}}" alt="{{$post->title}}">
+                                    <a href="{{$post->slug}}">
+                                        <img src="{{asset($post->featured_image)}}" alt="{{$post->title}}">
+                                    </a>
                                 </div>
                                 <div class="tw-text">
                                     <div class="tw-meta">{{$post->publish_date->diffForHumans()}}  /  by <a href="">{{$post->author->name}}</a></div>
